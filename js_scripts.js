@@ -611,7 +611,12 @@ function updateZoom(ev)
 
 	if((xpos-dx/2) >= 0 && (ypos-dy/2) >= 0 && (xpos+dx/2) <= canvasWidth && (ypos+dy/2) <= canvasHeight)
 	{
-		var zoomImage = ctx.getImageData(xpos-dx/2,ypos-dy/2,dx,dy);
+		try {
+			var zoomImage = ctx.getImageData(xpos-dx/2,ypos-dy/2,dx,dy);
+		} catch(e) {
+			netscape.security.PrivilegeManager.enablePrivilege("UniversalBrowserRead");
+			var zoomImage = ctx.getImageData(xpos-dx/2,ypos-dy/2,dx,dy); 
+		}
 	
 		tctx.putImageData(zoomImage,0,0);
 		var imgdata = tempCanvas.toDataURL();
