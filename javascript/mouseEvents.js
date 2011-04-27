@@ -1,9 +1,9 @@
 /*
 	WebPlotDigitizer - http://arohatgi.info/WebPlotDigitizer
 
-	Version 2.0
+	Version 2.1
 
-	Copyright 2010 Ankit Rohatgi <ankitrohatgi@hotmail.com>
+	Copyright 2011 Ankit Rohatgi <ankitrohatgi@hotmail.com>
 
 	This file is part of WebPlotDigitizer.
 
@@ -25,8 +25,8 @@
 
 
 /**
- * @fileoverview This file contains the mouse event handling methods.
- * @version 2.0
+ * @fileoverview Handle Mouse Events.
+ * @version 2.1
  * @author Ankit Rohatgi
  */
 

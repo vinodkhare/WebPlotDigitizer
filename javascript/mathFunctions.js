@@ -1,9 +1,9 @@
 /*
 	WebPlotDigitizer - http://arohatgi.info/WebPlotDigitizer
 
-	Version 2.0
+	Version 2.1
 
-	Copyright 2010 Ankit Rohatgi <ankitrohatgi@hotmail.com>
+	Copyright 2011 Ankit Rohatgi <ankitrohatgi@hotmail.com>
 
 	This file is part of WebPlotDigitizer.
 
@@ -23,8 +23,16 @@
 
 */
 
-/* This file contains math functions */
 
+/**
+ * @fileoverview Some math functions.
+ * @version 2.1
+ * @author Ankit Rohatgi ankitrohatgi@hotmail.com
+ */
+
+/**
+ * Find inverse of a 2x2 matrix.
+ */
 function matrixInverse22(A) // Inverse of a 2x2 matrix
 {
   a11 = parseFloat(A[0][0]);
@@ -49,6 +57,9 @@ function matrixInverse22(A) // Inverse of a 2x2 matrix
   return Ai;
 }
 
+/**
+ * Multiply two matrices
+ */
 function multiplyAB(A,r1,c1,B,r2,c2) // Multiply two matrices
 {
   var P = new Array();
@@ -86,4 +97,20 @@ function pixelToData(pxData)
 
 function dataToPixel(pdata)
 {
+}
+
+/** 
+ * Calculate inverse tan with range between 0, 2*pi.
+ */
+function taninverse(y,x)
+{
+  var inv_ans;
+  if (y>0) // I & II
+    inv_ans = Math.atan2(y,x);
+  else if (y<=0) // III & IV
+    inv_ans = Math.atan2(y,x) + 2*Math.PI;
+  
+  if(inv_ans >= 2*Math.PI)
+    inv_ans = 0.0;
+  return inv_ans;
 }

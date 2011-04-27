@@ -1,4 +1,19 @@
 This is a brief TODO list for this project.
 
-- Include a script to compact the javascript files.
-- Use JSDoc for documentation.
+Features:
+
+* Circular particle or arbitrary shape recognition. Just calculate the location of the centroid of the shape.
+* Distance measurement tool.
+* Edge detect filter.
+* Live view of coordinates.
+* Upload images even in the absence of FileReader API (IE, Safari, Opera) - this will require PHP/Flash :(
+
+User Interface:
+
+* Use drop down menu for Help.
+* Convert top row of buttons to a better looking menu.
+* Reduce the number of "popup" messages.
+* Edit help section and provide an index to the video tutorials.
+* Make things more intuitive.
+
+

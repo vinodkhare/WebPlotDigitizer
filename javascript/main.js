@@ -1,9 +1,9 @@
 /*
 	WebPlotDigitizer - http://arohatgi.info/WebPlotdigitizer
 
-	Version 2.0
+	Version 2.1
 
-	Copyright 2010 Ankit Rohatgi <ankitrohatgi@hotmail.com>
+	Copyright 2011 Ankit Rohatgi <ankitrohatgi@hotmail.com>
 
 	This file is part of WebPlotDigitizer.
 
@@ -25,7 +25,7 @@
 
 /**
  * @fileoverview This is the main entry point
- * @version 2.0
+ * @version 2.1
  * @author Ankit Rohatgi ankitrohatgi@hotmail.com
  */
 
@@ -36,6 +36,7 @@
 
 function init() // This is run when the page loads.
 {
+	checkBrowser();
 	canvas = document.getElementById('mainCanvas');
 	var canvasDiv = document.getElementById('canvasDiv');
 		
@@ -72,6 +73,12 @@ function init() // This is run when the page loads.
 	img.onload = function() { loadImage(img); originalImage = img; }
 	img.src = "start.png";
 	
+	// testing area for autodetection
+	testImgCanvas = document.getElementById('testImg');
+	testImgCanvas.width = canvasWidth/2;
+	testImgCanvas.height = canvasHeight/2;
+	testImgContext = testImgCanvas.getContext('2d');
+		
 	// specify mouseover function
 	//canvas.addEventListener('click',clickHandler,false);
 	canvas.addEventListener('mousemove',updateZoom,false);
@@ -83,9 +90,11 @@ function init() // This is run when the page loads.
 	// Set defaults everywhere.
 	setDefaultState();
 	
+	initZoom();
+	
 	originalScreen = getCanvasData();
 	activeScreen = originalScreen;
-
+	
 }
 
 
@@ -95,14 +104,18 @@ function init() // This is run when the page loads.
 function setDefaultState()
 {
 	axesPicked = 0;
-	
-	// :TODO: Move all this to zoomInit() or something
-	zctx.beginPath();
-	zctx.moveTo(zWindowWidth/2, 0);
-	zctx.lineTo(zWindowWidth/2, zWindowHeight);
-	zctx.moveTo(0, zWindowHeight/2);
-	zctx.lineTo(zWindowWidth, zWindowHeight/2);
-	zctx.stroke();
+	pointsPicked = 0;
+	xyData = [];
+	axesAlignmentData = [];
+			
+}
+
+function checkBrowser()
+{
+  if(!window.FileReader)
+  {
+    alert('\tWARNING!\nYou are using an unsupported browser. Please use Google Chrome 6+ or Firefox 3.6+.\n Sorry for the inconvenience.');
+  }
 }
 
 

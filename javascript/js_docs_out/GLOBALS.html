@@ -132,7 +132,7 @@ DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor
 	 </CODE>
 	 <BR>
 	 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	 
+	 Called when the 'acquire data' button is pressed.
       </TD>
    </TR>
 
@@ -162,11 +162,28 @@ DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor
       <TD>
 	 <CODE>
 	    <B>
-	       <A HREF="#!s!autodetectCurves">autodetectCurves</A></B>()
+	       <A HREF="#!s!alignAxes">alignAxes</A></B>()
 	 </CODE>
 	 <BR>
 	 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	 
+	 Store the alignment data.
+      </TD>
+   </TR>
+
+   <TR BGCOLOR="white" CLASS="TableRowColor">
+      <TD ALIGN="right" VALIGN="top" WIDTH="1%">
+	 <FONT SIZE="-1">
+	    <CODE>&lt;static&gt;&nbsp;void</CODE>
+	 </FONT>
+      </TD>
+      <TD>
+	 <CODE>
+	    <B>
+	       <A HREF="#!s!assignColor">assignColor</A></B>(color_mode, color_value)
+	 </CODE>
+	 <BR>
+	 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	 This function assigns the color to the global variables.
       </TD>
    </TR>
 
@@ -183,7 +200,7 @@ DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor
 	 </CODE>
 	 <BR>
 	 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	 
+	 Populate an ImageData array based on a binary data matrix.
       </TD>
    </TR>
 
@@ -200,7 +217,7 @@ DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor
 	 </CODE>
 	 <BR>
 	 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	 
+	 Enable Box painting on canvas.
       </TD>
    </TR>
 
@@ -217,7 +234,7 @@ DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor
 	 </CODE>
 	 <BR>
 	 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	 
+	 Handle mouse clicks when painting boxes - Mouse down
       </TD>
    </TR>
 
@@ -234,7 +251,7 @@ DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor
 	 </CODE>
 	 <BR>
 	 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	 
+	 Handle mouse clicks when painting boxes - Mouse drag
       </TD>
    </TR>
 
@@ -248,6 +265,23 @@ DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor
 	 <CODE>
 	    <B>
 	       <A HREF="#!s!boxPaintMouseup">boxPaintMouseup</A></B>(ev)
+	 </CODE>
+	 <BR>
+	 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	 Handle mouse clicks when painting boxes - Mouse up
+      </TD>
+   </TR>
+
+   <TR BGCOLOR="white" CLASS="TableRowColor">
+      <TD ALIGN="right" VALIGN="top" WIDTH="1%">
+	 <FONT SIZE="-1">
+	    <CODE>&lt;static&gt;&nbsp;void</CODE>
+	 </FONT>
+      </TD>
+      <TD>
+	 <CODE>
+	    <B>
+	       <A HREF="#!s!checkBrowser">checkBrowser</A></B>()
 	 </CODE>
 	 <BR>
 	 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -268,7 +302,7 @@ DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor
 	 </CODE>
 	 <BR>
 	 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	 
+	 Called when 'clear all' is hit.
       </TD>
    </TR>
 
@@ -285,7 +319,7 @@ DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor
 	 </CODE>
 	 <BR>
 	 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	 
+	 Hide all sidebars.
       </TD>
    </TR>
 
@@ -302,7 +336,7 @@ DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor
 	 </CODE>
 	 <BR>
 	 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	 
+	 Clear the toolbar area.
       </TD>
    </TR>
 
@@ -319,7 +353,7 @@ DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor
 	 </CODE>
 	 <BR>
 	 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	 
+	 Triggered by clicking on canvas, stores position in xyData global array.
       </TD>
    </TR>
 
@@ -353,7 +387,24 @@ DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor
 	 </CODE>
 	 <BR>
 	 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	 
+	 Handle clicks when picking color.
+      </TD>
+   </TR>
+
+   <TR BGCOLOR="white" CLASS="TableRowColor">
+      <TD ALIGN="right" VALIGN="top" WIDTH="1%">
+	 <FONT SIZE="-1">
+	    <CODE>&lt;static&gt;&nbsp;void</CODE>
+	 </FONT>
+      </TD>
+      <TD>
+	 <CODE>
+	    <B>
+	       <A HREF="#!s!colorPickerWindow">colorPickerWindow</A></B>(cmode)
+	 </CODE>
+	 <BR>
+	 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	 Opens the color picker.
       </TD>
    </TR>
 
@@ -370,7 +421,7 @@ DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor
 	 </CODE>
 	 <BR>
 	 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	 
+	 create BW image based on the colors specified.
       </TD>
    </TR>
 
@@ -387,7 +438,7 @@ DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor
 	 </CODE>
 	 <BR>
 	 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	 
+	 create BW image based on the colors but only in valid region of difference matrix.
       </TD>
    </TR>
 
@@ -404,7 +455,7 @@ DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor
 	 </CODE>
 	 <BR>
 	 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	 
+	 Copies pixels based on the difference matrix.
       </TD>
    </TR>
 
@@ -421,7 +472,7 @@ DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor
 	 </CODE>
 	 <BR>
 	 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	 
+	 Crop mode - mouse down
       </TD>
    </TR>
 
@@ -438,7 +489,7 @@ DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor
 	 </CODE>
 	 <BR>
 	 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	 
+	 Crop mode - mouse move
       </TD>
    </TR>
 
@@ -455,7 +506,7 @@ DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor
 	 </CODE>
 	 <BR>
 	 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	 
+	 Crop mode - mouse up
       </TD>
    </TR>
 
@@ -472,7 +523,7 @@ DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor
 	 </CODE>
 	 <BR>
 	 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	 
+	 Enable crop mode
       </TD>
    </TR>
 
@@ -506,7 +557,7 @@ DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor
 	 </CODE>
 	 <BR>
 	 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	 
+	 Delete specific point close to clicked position.
       </TD>
    </TR>
 
@@ -523,7 +574,7 @@ DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor
 	 </CODE>
 	 <BR>
 	 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	 
+	 Handle clicks when in specific point deletion mode
       </TD>
    </TR>
 
@@ -540,7 +591,7 @@ DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor
 	 </CODE>
 	 <BR>
 	 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	 
+	 Handle dropped file on canvas.
       </TD>
    </TR>
 
@@ -557,7 +608,7 @@ DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor
 	 </CODE>
 	 <BR>
 	 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	 
+	 Initiate the eraser.
       </TD>
    </TR>
 
@@ -574,7 +625,7 @@ DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor
 	 </CODE>
 	 <BR>
 	 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	 
+	 Manage mouse events when erasing - Mouse down
       </TD>
    </TR>
 
@@ -591,7 +642,7 @@ DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor
 	 </CODE>
 	 <BR>
 	 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	 
+	 Manage mouse events when erasing - Mouse drag
       </TD>
    </TR>
 
@@ -608,7 +659,7 @@ DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor
 	 </CODE>
 	 <BR>
 	 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	 
+	 Manage mouse events when erasing - Mouse up - this is slow!
       </TD>
    </TR>
 
@@ -625,14 +676,14 @@ DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor
 	 </CODE>
 	 <BR>
 	 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	 
+	 Finds differences between two sets of ImageData and returns a difference matrix.
       </TD>
    </TR>
 
    <TR BGCOLOR="white" CLASS="TableRowColor">
       <TD ALIGN="right" VALIGN="top" WIDTH="1%">
 	 <FONT SIZE="-1">
-	    <CODE>&lt;static&gt;&nbsp;Object</CODE>
+	    <CODE>&lt;static&gt;&nbsp;ImageData</CODE>
 	 </FONT>
       </TD>
       <TD>
@@ -642,7 +693,7 @@ DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor
 	 </CODE>
 	 <BR>
 	 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	 
+	 Returns getImageData from the main canvas.
       </TD>
    </TR>
 
@@ -659,7 +710,7 @@ DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor
 	 </CODE>
 	 <BR>
 	 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	 
+	 Flip picture horizontally
       </TD>
    </TR>
 
@@ -689,11 +740,62 @@ DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor
       <TD>
 	 <CODE>
 	    <B>
-	       <A HREF="#!s!loadImage">loadImage</A></B>(imgel)
+	       <A HREF="#!s!initiatePlotAlignment">initiatePlotAlignment</A></B>()
 	 </CODE>
 	 <BR>
 	 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	 
+	 Start the alignment process here.
+      </TD>
+   </TR>
+
+   <TR BGCOLOR="white" CLASS="TableRowColor">
+      <TD ALIGN="right" VALIGN="top" WIDTH="1%">
+	 <FONT SIZE="-1">
+	    <CODE>&lt;static&gt;&nbsp;void</CODE>
+	 </FONT>
+      </TD>
+      <TD>
+	 <CODE>
+	    <B>
+	       <A HREF="#!s!initZoom">initZoom</A></B>()
+	 </CODE>
+	 <BR>
+	 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	 Initialize Zoom Window
+      </TD>
+   </TR>
+
+   <TR BGCOLOR="white" CLASS="TableRowColor">
+      <TD ALIGN="right" VALIGN="top" WIDTH="1%">
+	 <FONT SIZE="-1">
+	    <CODE>&lt;static&gt;&nbsp;void</CODE>
+	 </FONT>
+      </TD>
+      <TD>
+	 <CODE>
+	    <B>
+	       <A HREF="#!s!launchTestWindow">launchTestWindow</A></B>()
+	 </CODE>
+	 <BR>
+	 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	 Launches the test window and initiates a color based detection.
+      </TD>
+   </TR>
+
+   <TR BGCOLOR="white" CLASS="TableRowColor">
+      <TD ALIGN="right" VALIGN="top" WIDTH="1%">
+	 <FONT SIZE="-1">
+	    <CODE>&lt;static&gt;&nbsp;void</CODE>
+	 </FONT>
+      </TD>
+      <TD>
+	 <CODE>
+	    <B>
+	       <A HREF="#!s!loadImage">loadImage</A></B>(&lt;Image&gt; imgel)
+	 </CODE>
+	 <BR>
+	 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	 Load an image on the main canvas.
       </TD>
    </TR>
 
@@ -710,7 +812,7 @@ DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor
 	 </CODE>
 	 <BR>
 	 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	 
+	 Find inverse of a 2x2 matrix.
       </TD>
    </TR>
 
@@ -727,7 +829,7 @@ DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor
 	 </CODE>
 	 <BR>
 	 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	 
+	 Multiply two matrices
       </TD>
    </TR>
 
@@ -744,7 +846,7 @@ DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor
 	 </CODE>
 	 <BR>
 	 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	 
+	 Enable pen like painting on screen.
       </TD>
    </TR>
 
@@ -761,7 +863,7 @@ DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor
 	 </CODE>
 	 <BR>
 	 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	 
+	 Manage clicks when painting with pen tool - Mouse down
       </TD>
    </TR>
 
@@ -778,7 +880,7 @@ DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor
 	 </CODE>
 	 <BR>
 	 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	 
+	 Manage clicks when painting with pen tool - Mouse drag
       </TD>
    </TR>
 
@@ -795,7 +897,7 @@ DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor
 	 </CODE>
 	 <BR>
 	 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	 
+	 Manage clicks when painting with pen tool - Mouse up
       </TD>
    </TR>
 
@@ -808,11 +910,11 @@ DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor
       <TD>
 	 <CODE>
 	    <B>
-	       <A HREF="#!s!pickColor">pickColor</A></B>(cmode)
+	       <A HREF="#!s!pickColor">pickColor</A></B>()
 	 </CODE>
 	 <BR>
 	 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	 
+	 Initiate color picking on canvas.
       </TD>
    </TR>
 
@@ -825,11 +927,11 @@ DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor
       <TD>
 	 <CODE>
 	    <B>
-	       <A HREF="#!s!pickCorners">pickCorners</A></B>(ev)
+	       <A HREF="#!s!pickCorners">pickCorners</A></B>(&lt;Event&gt; ev)
 	 </CODE>
 	 <BR>
 	 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	 
+	 Handles mouseclick in axis alignment mode.
       </TD>
    </TR>
 
@@ -846,7 +948,7 @@ DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor
 	 </CODE>
 	 <BR>
 	 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	 
+	 Initiate Manual data acquisition.
       </TD>
    </TR>
 
@@ -880,7 +982,7 @@ DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor
 	 </CODE>
 	 <BR>
 	 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	 
+	 Updates the displayed number of points on the sidebar.
       </TD>
    </TR>
 
@@ -910,11 +1012,11 @@ DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor
       <TD>
 	 <CODE>
 	    <B>
-	       <A HREF="#!s!putCanvasData">putCanvasData</A></B>(cImgData)
+	       <A HREF="#!s!putCanvasData">putCanvasData</A></B>(&lt;ImageData&gt; cImgData)
 	 </CODE>
 	 <BR>
 	 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	 
+	 Load image on the main canvas
       </TD>
    </TR>
 
@@ -931,7 +1033,7 @@ DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor
 	 </CODE>
 	 <BR>
 	 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	 
+	 Redraw/Reset canvas.
       </TD>
    </TR>
 
@@ -948,7 +1050,7 @@ DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor
 	 </CODE>
 	 <BR>
 	 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	 
+	 Redraw/Reset canvas.
       </TD>
    </TR>
 
@@ -999,7 +1101,7 @@ DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor
 	 </CODE>
 	 <BR>
 	 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	 
+	 Restore to original image
       </TD>
    </TR>
 
@@ -1016,7 +1118,7 @@ DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor
 	 </CODE>
 	 <BR>
 	 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	 
+	 Rotate image by a certain specified angle.
       </TD>
    </TR>
 
@@ -1033,7 +1135,7 @@ DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor
 	 </CODE>
 	 <BR>
 	 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	 
+	 Save the current state.
       </TD>
    </TR>
 
@@ -1050,7 +1152,7 @@ DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor
 	 </CODE>
 	 <BR>
 	 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	 
+	 Generate the .CSV output.
       </TD>
    </TR>
 
@@ -1063,11 +1165,45 @@ DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor
       <TD>
 	 <CODE>
 	    <B>
-	       <A HREF="#!s!setAxes">setAxes</A></B>(ax_mode)
+	       <A HREF="#!s!saveTest">saveTest</A></B>()
 	 </CODE>
 	 <BR>
 	 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	 
+	 Save the test canvas as a new image
+      </TD>
+   </TR>
+
+   <TR BGCOLOR="white" CLASS="TableRowColor">
+      <TD ALIGN="right" VALIGN="top" WIDTH="1%">
+	 <FONT SIZE="-1">
+	    <CODE>&lt;static&gt;&nbsp;Object</CODE>
+	 </FONT>
+      </TD>
+      <TD>
+	 <CODE>
+	    <B>
+	       <A HREF="#!s!scanPlot">scanPlot</A></B>()
+	 </CODE>
+	 <BR>
+	 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	 Automatic curve extraction algorithm.
+      </TD>
+   </TR>
+
+   <TR BGCOLOR="white" CLASS="TableRowColor">
+      <TD ALIGN="right" VALIGN="top" WIDTH="1%">
+	 <FONT SIZE="-1">
+	    <CODE>&lt;static&gt;&nbsp;void</CODE>
+	 </FONT>
+      </TD>
+      <TD>
+	 <CODE>
+	    <B>
+	       <A HREF="#!s!setAxes">setAxes</A></B>(&lt;String&gt; ax_mode)
+	 </CODE>
+	 <BR>
+	 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	 Entry point for Axes alignment.
       </TD>
    </TR>
 
@@ -1097,23 +1233,6 @@ DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor
       <TD>
 	 <CODE>
 	    <B>
-	       <A HREF="#!s!setXYRange">setXYRange</A></B>()
-	 </CODE>
-	 <BR>
-	 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	 
-      </TD>
-   </TR>
-
-   <TR BGCOLOR="white" CLASS="TableRowColor">
-      <TD ALIGN="right" VALIGN="top" WIDTH="1%">
-	 <FONT SIZE="-1">
-	    <CODE>&lt;static&gt;&nbsp;void</CODE>
-	 </FONT>
-      </TD>
-      <TD>
-	 <CODE>
-	    <B>
 	       <A HREF="#!s!showPopup">showPopup</A></B>(&lt;String&gt; popupid)
 	 </CODE>
 	 <BR>
@@ -1131,11 +1250,11 @@ DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor
       <TD>
 	 <CODE>
 	    <B>
-	       <A HREF="#!s!showSidebar">showSidebar</A></B>(sbid)
+	       <A HREF="#!s!showSidebar">showSidebar</A></B>(&lt;String&gt; sbid)
 	 </CODE>
 	 <BR>
 	 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	 
+	 Show a specific sidebar
       </TD>
    </TR>
 
@@ -1148,11 +1267,11 @@ DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor
       <TD>
 	 <CODE>
 	    <B>
-	       <A HREF="#!s!showToolbar">showToolbar</A></B>(sbid)
+	       <A HREF="#!s!showToolbar">showToolbar</A></B>(&lt;String&gt; sbid)
 	 </CODE>
 	 <BR>
 	 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	 
+	 Show a specific toolbar
       </TD>
    </TR>
 
@@ -1176,6 +1295,23 @@ DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor
    <TR BGCOLOR="white" CLASS="TableRowColor">
       <TD ALIGN="right" VALIGN="top" WIDTH="1%">
 	 <FONT SIZE="-1">
+	    <CODE>&lt;static&gt;&nbsp;Object</CODE>
+	 </FONT>
+      </TD>
+      <TD>
+	 <CODE>
+	    <B>
+	       <A HREF="#!s!taninverse">taninverse</A></B>(y,x)
+	 </CODE>
+	 <BR>
+	 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	 Calculate inverse tan with range between 0, 2*pi.
+      </TD>
+   </TR>
+
+   <TR BGCOLOR="white" CLASS="TableRowColor">
+      <TD ALIGN="right" VALIGN="top" WIDTH="1%">
+	 <FONT SIZE="-1">
 	    <CODE>&lt;static&gt;&nbsp;void</CODE>
 	 </FONT>
       </TD>
@@ -1186,7 +1322,24 @@ DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor
 	 </CODE>
 	 <BR>
 	 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	 
+	 Deletes the last point picked.
+      </TD>
+   </TR>
+
+   <TR BGCOLOR="white" CLASS="TableRowColor">
+      <TD ALIGN="right" VALIGN="top" WIDTH="1%">
+	 <FONT SIZE="-1">
+	    <CODE>&lt;static&gt;&nbsp;void</CODE>
+	 </FONT>
+      </TD>
+      <TD>
+	 <CODE>
+	    <B>
+	       <A HREF="#!s!updateTestWindow">updateTestWindow</A></B>()
+	 </CODE>
+	 <BR>
+	 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	 Filter based on color and display a test image on the scan settings dialog.
       </TD>
    </TR>
 
@@ -1203,7 +1356,7 @@ DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor
 	 </CODE>
 	 <BR>
 	 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	 
+	 Update view.
       </TD>
    </TR>
 
@@ -1220,7 +1373,7 @@ DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor
 	 </CODE>
 	 <BR>
 	 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	 
+	 Flip picture vertically
       </TD>
    </TR>
 
@@ -1270,6 +1423,8 @@ DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor
    <H3>acquireData</H3>
    <PRE>&lt;static&gt; void <B>acquireData</B>()</PRE>
    
+      <UL>Called when the 'acquire data' button is pressed.</UL>
+   
 
    <!-- METHOD PARAMETERS START -->
    
@@ -1314,9 +1469,29 @@ DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor
    <!-- ADDITIONAL ATTRIBUTES  END -->
 <HR>
 
-   <A NAME="!s!autodetectCurves"><!-- --></A>
-   <H3>autodetectCurves</H3>
-   <PRE>&lt;static&gt; void <B>autodetectCurves</B>()</PRE>
+   <A NAME="!s!alignAxes"><!-- --></A>
+   <H3>alignAxes</H3>
+   <PRE>&lt;static&gt; void <B>alignAxes</B>()</PRE>
+   
+      <UL>Store the alignment data.</UL>
+   
+
+   <!-- METHOD PARAMETERS START -->
+   
+   <!-- METHOD PARAMETERS END -->
+
+   
+
+   <!-- ADDITIONAL ATTRIBUTES START -->
+   
+   <!-- ADDITIONAL ATTRIBUTES  END -->
+<HR>
+
+   <A NAME="!s!assignColor"><!-- --></A>
+   <H3>assignColor</H3>
+   <PRE>&lt;static&gt; void <B>assignColor</B>(color_mode, color_value)</PRE>
+   
+      <UL>This function assigns the color to the global variables.</UL>
    
 
    <!-- METHOD PARAMETERS START -->
@@ -1334,6 +1509,8 @@ DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor
    <H3>binaryToImageData</H3>
    <PRE>&lt;static&gt; Object <B>binaryToImageData</B>(bwdata,imgd)</PRE>
    
+      <UL>Populate an ImageData array based on a binary data matrix.</UL>
+   
 
    <!-- METHOD PARAMETERS START -->
    
@@ -1349,6 +1526,8 @@ DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor
    <A NAME="!s!boxPaint"><!-- --></A>
    <H3>boxPaint</H3>
    <PRE>&lt;static&gt; void <B>boxPaint</B>()</PRE>
+   
+      <UL>Enable Box painting on canvas.</UL>
    
 
    <!-- METHOD PARAMETERS START -->
@@ -1366,6 +1545,8 @@ DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor
    <H3>boxPaintMousedown</H3>
    <PRE>&lt;static&gt; void <B>boxPaintMousedown</B>(ev)</PRE>
    
+      <UL>Handle mouse clicks when painting boxes - Mouse down</UL>
+   
 
    <!-- METHOD PARAMETERS START -->
    
@@ -1381,6 +1562,8 @@ DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor
    <A NAME="!s!boxPaintMousedrag"><!-- --></A>
    <H3>boxPaintMousedrag</H3>
    <PRE>&lt;static&gt; void <B>boxPaintMousedrag</B>(ev)</PRE>
+   
+      <UL>Handle mouse clicks when painting boxes - Mouse drag</UL>
    
 
    <!-- METHOD PARAMETERS START -->
@@ -1398,6 +1581,24 @@ DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor
    <H3>boxPaintMouseup</H3>
    <PRE>&lt;static&gt; void <B>boxPaintMouseup</B>(ev)</PRE>
    
+      <UL>Handle mouse clicks when painting boxes - Mouse up</UL>
+   
+
+   <!-- METHOD PARAMETERS START -->
+   
+   <!-- METHOD PARAMETERS END -->
+
+   
+
+   <!-- ADDITIONAL ATTRIBUTES START -->
+   
+   <!-- ADDITIONAL ATTRIBUTES  END -->
+<HR>
+
+   <A NAME="!s!checkBrowser"><!-- --></A>
+   <H3>checkBrowser</H3>
+   <PRE>&lt;static&gt; void <B>checkBrowser</B>()</PRE>
+   
 
    <!-- METHOD PARAMETERS START -->
    
@@ -1413,6 +1614,8 @@ DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor
    <A NAME="!s!clearPoints"><!-- --></A>
    <H3>clearPoints</H3>
    <PRE>&lt;static&gt; void <B>clearPoints</B>()</PRE>
+   
+      <UL>Called when 'clear all' is hit. Clears data collected, redraws canvas.</UL>
    
 
    <!-- METHOD PARAMETERS START -->
@@ -1430,6 +1633,8 @@ DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor
    <H3>clearSidebar</H3>
    <PRE>&lt;static&gt; void <B>clearSidebar</B>()</PRE>
    
+      <UL>Hide all sidebars.</UL>
+   
 
    <!-- METHOD PARAMETERS START -->
    
@@ -1446,6 +1651,8 @@ DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor
    <H3>clearToolbar</H3>
    <PRE>&lt;static&gt; void <B>clearToolbar</B>()</PRE>
    
+      <UL>Clear the toolbar area.</UL>
+   
 
    <!-- METHOD PARAMETERS START -->
    
@@ -1461,6 +1668,8 @@ DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor
    <A NAME="!s!clickPoints"><!-- --></A>
    <H3>clickPoints</H3>
    <PRE>&lt;static&gt; void <B>clickPoints</B>(ev)</PRE>
+   
+      <UL>Triggered by clicking on canvas, stores position in xyData global array.</UL>
    
 
    <!-- METHOD PARAMETERS START -->
@@ -1504,6 +1713,26 @@ DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor
    <H3>colorPicker</H3>
    <PRE>&lt;static&gt; void <B>colorPicker</B>(ev)</PRE>
    
+      <UL>Handle clicks when picking color.</UL>
+   
+
+   <!-- METHOD PARAMETERS START -->
+   
+   <!-- METHOD PARAMETERS END -->
+
+   
+
+   <!-- ADDITIONAL ATTRIBUTES START -->
+   
+   <!-- ADDITIONAL ATTRIBUTES  END -->
+<HR>
+
+   <A NAME="!s!colorPickerWindow"><!-- --></A>
+   <H3>colorPickerWindow</H3>
+   <PRE>&lt;static&gt; void <B>colorPickerWindow</B>(cmode)</PRE>
+   
+      <UL>Opens the color picker.</UL>
+   
 
    <!-- METHOD PARAMETERS START -->
    
@@ -1519,6 +1748,8 @@ DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor
    <A NAME="!s!colorSelect"><!-- --></A>
    <H3>colorSelect</H3>
    <PRE>&lt;static&gt; Object <B>colorSelect</B>(imgd, mode, colorRGB, tol)</PRE>
+   
+      <UL>create BW image based on the colors specified.</UL>
    
 
    <!-- METHOD PARAMETERS START -->
@@ -1536,6 +1767,8 @@ DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor
    <H3>colorSelectDiff</H3>
    <PRE>&lt;static&gt; Object <B>colorSelectDiff</B>(imgd, mode, colorRGB, tol, diff)</PRE>
    
+      <UL>create BW image based on the colors but only in valid region of difference matrix.</UL>
+   
 
    <!-- METHOD PARAMETERS START -->
    
@@ -1551,6 +1784,8 @@ DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor
    <A NAME="!s!copyUsingDifference"><!-- --></A>
    <H3>copyUsingDifference</H3>
    <PRE>&lt;static&gt; Object <B>copyUsingDifference</B>(copyTo, copyFrom, diff)</PRE>
+   
+      <UL>Copies pixels based on the difference matrix.</UL>
    
 
    <!-- METHOD PARAMETERS START -->
@@ -1568,6 +1803,8 @@ DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor
    <H3>cropMousedown</H3>
    <PRE>&lt;static&gt; void <B>cropMousedown</B>(ev)</PRE>
    
+      <UL>Crop mode - mouse down</UL>
+   
 
    <!-- METHOD PARAMETERS START -->
    
@@ -1583,6 +1820,8 @@ DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor
    <A NAME="!s!cropMousemove"><!-- --></A>
    <H3>cropMousemove</H3>
    <PRE>&lt;static&gt; void <B>cropMousemove</B>(ev)</PRE>
+   
+      <UL>Crop mode - mouse move</UL>
    
 
    <!-- METHOD PARAMETERS START -->
@@ -1600,6 +1839,8 @@ DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor
    <H3>cropMouseup</H3>
    <PRE>&lt;static&gt; void <B>cropMouseup</B>(ev)</PRE>
    
+      <UL>Crop mode - mouse up</UL>
+   
 
    <!-- METHOD PARAMETERS START -->
    
@@ -1615,6 +1856,8 @@ DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor
    <A NAME="!s!cropPlot"><!-- --></A>
    <H3>cropPlot</H3>
    <PRE>&lt;static&gt; void <B>cropPlot</B>()</PRE>
+   
+      <UL>Enable crop mode</UL>
    
 
    <!-- METHOD PARAMETERS START -->
@@ -1648,6 +1891,8 @@ DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor
    <H3>deleteSpecificPoint</H3>
    <PRE>&lt;static&gt; void <B>deleteSpecificPoint</B>()</PRE>
    
+      <UL>Delete specific point close to clicked position.</UL>
+   
 
    <!-- METHOD PARAMETERS START -->
    
@@ -1663,6 +1908,8 @@ DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor
    <A NAME="!s!deleteSpecificPointHandler"><!-- --></A>
    <H3>deleteSpecificPointHandler</H3>
    <PRE>&lt;static&gt; void <B>deleteSpecificPointHandler</B>(ev)</PRE>
+   
+      <UL>Handle clicks when in specific point deletion mode</UL>
    
 
    <!-- METHOD PARAMETERS START -->
@@ -1680,6 +1927,8 @@ DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor
    <H3>dropHandler</H3>
    <PRE>&lt;static&gt; void <B>dropHandler</B>(ev)</PRE>
    
+      <UL>Handle dropped file on canvas.</UL>
+   
 
    <!-- METHOD PARAMETERS START -->
    
@@ -1695,6 +1944,8 @@ DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor
    <A NAME="!s!eraser"><!-- --></A>
    <H3>eraser</H3>
    <PRE>&lt;static&gt; void <B>eraser</B>()</PRE>
+   
+      <UL>Initiate the eraser.</UL>
    
 
    <!-- METHOD PARAMETERS START -->
@@ -1712,6 +1963,8 @@ DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor
    <H3>eraserMousedown</H3>
    <PRE>&lt;static&gt; void <B>eraserMousedown</B>(ev)</PRE>
    
+      <UL>Manage mouse events when erasing - Mouse down</UL>
+   
 
    <!-- METHOD PARAMETERS START -->
    
@@ -1727,6 +1980,8 @@ DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor
    <A NAME="!s!eraserMousedrag"><!-- --></A>
    <H3>eraserMousedrag</H3>
    <PRE>&lt;static&gt; void <B>eraserMousedrag</B>(ev)</PRE>
+   
+      <UL>Manage mouse events when erasing - Mouse drag</UL>
    
 
    <!-- METHOD PARAMETERS START -->
@@ -1744,6 +1999,8 @@ DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor
    <H3>eraserMouseup</H3>
    <PRE>&lt;static&gt; void <B>eraserMouseup</B>(ev)</PRE>
    
+      <UL>Manage mouse events when erasing - Mouse up - this is slow!</UL>
+   
 
    <!-- METHOD PARAMETERS START -->
    
@@ -1760,6 +2017,8 @@ DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor
    <H3>findDifference</H3>
    <PRE>&lt;static&gt; Object <B>findDifference</B>(d1,d2)</PRE>
    
+      <UL>Finds differences between two sets of ImageData and returns a difference matrix. 'true' where unmatched, 'false' where pixels match.</UL>
+   
 
    <!-- METHOD PARAMETERS START -->
    
@@ -1774,13 +2033,22 @@ DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor
 
    <A NAME="!s!getCanvasData"><!-- --></A>
    <H3>getCanvasData</H3>
-   <PRE>&lt;static&gt; Object <B>getCanvasData</B>()</PRE>
+   <PRE>&lt;static&gt; ImageData <B>getCanvasData</B>()</PRE>
+   
+      <UL>Returns getImageData from the main canvas.</UL>
    
 
    <!-- METHOD PARAMETERS START -->
    
    <!-- METHOD PARAMETERS END -->
 
+   
+   <UL>
+   <B>Returns:</B>
+        <UL>
+         Current ImageData. 
+        </UL>
+   </UL>
    
 
    <!-- ADDITIONAL ATTRIBUTES START -->
@@ -1791,6 +2059,8 @@ DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor
    <A NAME="!s!hflip"><!-- --></A>
    <H3>hflip</H3>
    <PRE>&lt;static&gt; void <B>hflip</B>()</PRE>
+   
+      <UL>Flip picture horizontally</UL>
    
 
    <!-- METHOD PARAMETERS START -->
@@ -1822,9 +2092,11 @@ DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor
    <!-- ADDITIONAL ATTRIBUTES  END -->
 <HR>
 
-   <A NAME="!s!loadImage"><!-- --></A>
-   <H3>loadImage</H3>
-   <PRE>&lt;static&gt; void <B>loadImage</B>(imgel)</PRE>
+   <A NAME="!s!initiatePlotAlignment"><!-- --></A>
+   <H3>initiatePlotAlignment</H3>
+   <PRE>&lt;static&gt; void <B>initiatePlotAlignment</B>()</PRE>
+   
+      <UL>Start the alignment process here. Called from the Plot Type option popup.</UL>
    
 
    <!-- METHOD PARAMETERS START -->
@@ -1838,9 +2110,73 @@ DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor
    <!-- ADDITIONAL ATTRIBUTES  END -->
 <HR>
 
+   <A NAME="!s!initZoom"><!-- --></A>
+   <H3>initZoom</H3>
+   <PRE>&lt;static&gt; void <B>initZoom</B>()</PRE>
+   
+      <UL>Initialize Zoom Window</UL>
+   
+
+   <!-- METHOD PARAMETERS START -->
+   
+   <!-- METHOD PARAMETERS END -->
+
+   
+
+   <!-- ADDITIONAL ATTRIBUTES START -->
+   
+   <!-- ADDITIONAL ATTRIBUTES  END -->
+<HR>
+
+   <A NAME="!s!launchTestWindow"><!-- --></A>
+   <H3>launchTestWindow</H3>
+   <PRE>&lt;static&gt; void <B>launchTestWindow</B>()</PRE>
+   
+      <UL>Launches the test window and initiates a color based detection.</UL>
+   
+
+   <!-- METHOD PARAMETERS START -->
+   
+   <!-- METHOD PARAMETERS END -->
+
+   
+
+   <!-- ADDITIONAL ATTRIBUTES START -->
+   
+   <!-- ADDITIONAL ATTRIBUTES  END -->
+<HR>
+
+   <A NAME="!s!loadImage"><!-- --></A>
+   <H3>loadImage</H3>
+   <PRE>&lt;static&gt; void <B>loadImage</B>(&lt;Image&gt; imgel)</PRE>
+   
+      <UL>Load an image on the main canvas.</UL>
+   
+
+   <!-- METHOD PARAMETERS START -->
+   
+   <UL>
+   <B>Parameters:</B>
+   
+     <UL><CODE>imgel</CODE> -  Image to load.    
+      </UL> 
+   
+   </UL>
+   
+   <!-- METHOD PARAMETERS END -->
+
+   
+
+   <!-- ADDITIONAL ATTRIBUTES START -->
+   
+   <!-- ADDITIONAL ATTRIBUTES  END -->
+<HR>
+
    <A NAME="!s!matrixInverse22"><!-- --></A>
    <H3>matrixInverse22</H3>
    <PRE>&lt;static&gt; Object <B>matrixInverse22</B>(A)</PRE>
+   
+      <UL>Find inverse of a 2x2 matrix.</UL>
    
 
    <!-- METHOD PARAMETERS START -->
@@ -1858,6 +2194,8 @@ DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor
    <H3>multiplyAB</H3>
    <PRE>&lt;static&gt; Object <B>multiplyAB</B>(A,r1,c1,B,r2,c2)</PRE>
    
+      <UL>Multiply two matrices</UL>
+   
 
    <!-- METHOD PARAMETERS START -->
    
@@ -1873,6 +2211,8 @@ DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor
    <A NAME="!s!penPaint"><!-- --></A>
    <H3>penPaint</H3>
    <PRE>&lt;static&gt; void <B>penPaint</B>()</PRE>
+   
+      <UL>Enable pen like painting on screen.</UL>
    
 
    <!-- METHOD PARAMETERS START -->
@@ -1890,6 +2230,8 @@ DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor
    <H3>penPaintMousedown</H3>
    <PRE>&lt;static&gt; void <B>penPaintMousedown</B>(ev)</PRE>
    
+      <UL>Manage clicks when painting with pen tool - Mouse down</UL>
+   
 
    <!-- METHOD PARAMETERS START -->
    
@@ -1905,6 +2247,8 @@ DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor
    <A NAME="!s!penPaintMousedrag"><!-- --></A>
    <H3>penPaintMousedrag</H3>
    <PRE>&lt;static&gt; void <B>penPaintMousedrag</B>(ev)</PRE>
+   
+      <UL>Manage clicks when painting with pen tool - Mouse drag</UL>
    
 
    <!-- METHOD PARAMETERS START -->
@@ -1922,6 +2266,8 @@ DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor
    <H3>penPaintMouseup</H3>
    <PRE>&lt;static&gt; void <B>penPaintMouseup</B>(ev)</PRE>
    
+      <UL>Manage clicks when painting with pen tool - Mouse up</UL>
+   
 
    <!-- METHOD PARAMETERS START -->
    
@@ -1936,7 +2282,9 @@ DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor
 
    <A NAME="!s!pickColor"><!-- --></A>
    <H3>pickColor</H3>
-   <PRE>&lt;static&gt; void <B>pickColor</B>(cmode)</PRE>
+   <PRE>&lt;static&gt; void <B>pickColor</B>()</PRE>
+   
+      <UL>Initiate color picking on canvas.</UL>
    
 
    <!-- METHOD PARAMETERS START -->
@@ -1952,10 +2300,20 @@ DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor
 
    <A NAME="!s!pickCorners"><!-- --></A>
    <H3>pickCorners</H3>
-   <PRE>&lt;static&gt; void <B>pickCorners</B>(ev)</PRE>
+   <PRE>&lt;static&gt; void <B>pickCorners</B>(&lt;Event&gt; ev)</PRE>
+   
+      <UL>Handles mouseclick in axis alignment mode. Axes point are defined using this.</UL>
    
 
    <!-- METHOD PARAMETERS START -->
+   
+   <UL>
+   <B>Parameters:</B>
+   
+     <UL><CODE>ev</CODE> -  Mouse event.    
+      </UL> 
+   
+   </UL>
    
    <!-- METHOD PARAMETERS END -->
 
@@ -1969,6 +2327,8 @@ DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor
    <A NAME="!s!pickPoints"><!-- --></A>
    <H3>pickPoints</H3>
    <PRE>&lt;static&gt; void <B>pickPoints</B>()</PRE>
+   
+      <UL>Initiate Manual data acquisition. Enables data capture on the canvas.</UL>
    
 
    <!-- METHOD PARAMETERS START -->
@@ -2001,6 +2361,8 @@ DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor
    <A NAME="!s!pointsStatus"><!-- --></A>
    <H3>pointsStatus</H3>
    <PRE>&lt;static&gt; void <B>pointsStatus</B>(pn)</PRE>
+   
+      <UL>Updates the displayed number of points on the sidebar.</UL>
    
 
    <!-- METHOD PARAMETERS START -->
@@ -2042,10 +2404,20 @@ DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor
 
    <A NAME="!s!putCanvasData"><!-- --></A>
    <H3>putCanvasData</H3>
-   <PRE>&lt;static&gt; void <B>putCanvasData</B>(cImgData)</PRE>
+   <PRE>&lt;static&gt; void <B>putCanvasData</B>(&lt;ImageData&gt; cImgData)</PRE>
+   
+      <UL>Load image on the main canvas</UL>
    
 
    <!-- METHOD PARAMETERS START -->
+   
+   <UL>
+   <B>Parameters:</B>
+   
+     <UL><CODE>cImgData</CODE> -  ImageData.    
+      </UL> 
+   
+   </UL>
    
    <!-- METHOD PARAMETERS END -->
 
@@ -2059,6 +2431,8 @@ DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor
    <A NAME="!s!redrawCanvas"><!-- --></A>
    <H3>redrawCanvas</H3>
    <PRE>&lt;static&gt; void <B>redrawCanvas</B>()</PRE>
+   
+      <UL>Redraw/Reset canvas.</UL>
    
 
    <!-- METHOD PARAMETERS START -->
@@ -2075,6 +2449,8 @@ DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor
    <A NAME="!s!reloadPlot"><!-- --></A>
    <H3>reloadPlot</H3>
    <PRE>&lt;static&gt; void <B>reloadPlot</B>()</PRE>
+   
+      <UL>Redraw/Reset canvas.</UL>
    
 
    <!-- METHOD PARAMETERS START -->
@@ -2142,6 +2518,8 @@ DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor
    <H3>restoreOriginalImage</H3>
    <PRE>&lt;static&gt; void <B>restoreOriginalImage</B>()</PRE>
    
+      <UL>Restore to original image</UL>
+   
 
    <!-- METHOD PARAMETERS START -->
    
@@ -2157,6 +2535,8 @@ DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor
    <A NAME="!s!rotateCanvas"><!-- --></A>
    <H3>rotateCanvas</H3>
    <PRE>&lt;static&gt; void <B>rotateCanvas</B>()</PRE>
+   
+      <UL>Rotate image by a certain specified angle. Not implemented yet.</UL>
    
 
    <!-- METHOD PARAMETERS START -->
@@ -2174,6 +2554,8 @@ DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor
    <H3>saveCanvasImage</H3>
    <PRE>&lt;static&gt; void <B>saveCanvasImage</B>()</PRE>
    
+      <UL>Save the current state.</UL>
+   
 
    <!-- METHOD PARAMETERS START -->
    
@@ -2190,6 +2572,44 @@ DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor
    <H3>saveData</H3>
    <PRE>&lt;static&gt; void <B>saveData</B>()</PRE>
    
+      <UL>Generate the .CSV output.</UL>
+   
+
+   <!-- METHOD PARAMETERS START -->
+   
+   <!-- METHOD PARAMETERS END -->
+
+   
+
+   <!-- ADDITIONAL ATTRIBUTES START -->
+   
+   <!-- ADDITIONAL ATTRIBUTES  END -->
+<HR>
+
+   <A NAME="!s!saveTest"><!-- --></A>
+   <H3>saveTest</H3>
+   <PRE>&lt;static&gt; void <B>saveTest</B>()</PRE>
+   
+      <UL>Save the test canvas as a new image</UL>
+   
+
+   <!-- METHOD PARAMETERS START -->
+   
+   <!-- METHOD PARAMETERS END -->
+
+   
+
+   <!-- ADDITIONAL ATTRIBUTES START -->
+   
+   <!-- ADDITIONAL ATTRIBUTES  END -->
+<HR>
+
+   <A NAME="!s!scanPlot"><!-- --></A>
+   <H3>scanPlot</H3>
+   <PRE>&lt;static&gt; Object <B>scanPlot</B>()</PRE>
+   
+      <UL>Automatic curve extraction algorithm.</UL>
+   
 
    <!-- METHOD PARAMETERS START -->
    
@@ -2204,10 +2624,20 @@ DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor
 
    <A NAME="!s!setAxes"><!-- --></A>
    <H3>setAxes</H3>
-   <PRE>&lt;static&gt; void <B>setAxes</B>(ax_mode)</PRE>
+   <PRE>&lt;static&gt; void <B>setAxes</B>(&lt;String&gt; ax_mode)</PRE>
+   
+      <UL>Entry point for Axes alignment.</UL>
    
 
    <!-- METHOD PARAMETERS START -->
+   
+   <UL>
+   <B>Parameters:</B>
+   
+     <UL><CODE>ax_mode</CODE> -  Plot Type. Options: 'XY', 'bar', 'polar', 'ternary'    
+      </UL> 
+   
+   </UL>
    
    <!-- METHOD PARAMETERS END -->
 
@@ -2223,22 +2653,6 @@ DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor
    <PRE>&lt;static&gt; void <B>setDefaultState</B>()</PRE>
    
       <UL>Reset canvas and zoom window to initial state.</UL>
-   
-
-   <!-- METHOD PARAMETERS START -->
-   
-   <!-- METHOD PARAMETERS END -->
-
-   
-
-   <!-- ADDITIONAL ATTRIBUTES START -->
-   
-   <!-- ADDITIONAL ATTRIBUTES  END -->
-<HR>
-
-   <A NAME="!s!setXYRange"><!-- --></A>
-   <H3>setXYRange</H3>
-   <PRE>&lt;static&gt; void <B>setXYRange</B>()</PRE>
    
 
    <!-- METHOD PARAMETERS START -->
@@ -2280,10 +2694,20 @@ DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor
 
    <A NAME="!s!showSidebar"><!-- --></A>
    <H3>showSidebar</H3>
-   <PRE>&lt;static&gt; void <B>showSidebar</B>(sbid)</PRE>
+   <PRE>&lt;static&gt; void <B>showSidebar</B>(&lt;String&gt; sbid)</PRE>
+   
+      <UL>Show a specific sidebar</UL>
    
 
    <!-- METHOD PARAMETERS START -->
+   
+   <UL>
+   <B>Parameters:</B>
+   
+     <UL><CODE>sbid</CODE> -  Sidebar ID.    
+      </UL> 
+   
+   </UL>
    
    <!-- METHOD PARAMETERS END -->
 
@@ -2296,10 +2720,20 @@ DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor
 
    <A NAME="!s!showToolbar"><!-- --></A>
    <H3>showToolbar</H3>
-   <PRE>&lt;static&gt; void <B>showToolbar</B>(sbid)</PRE>
+   <PRE>&lt;static&gt; void <B>showToolbar</B>(&lt;String&gt; sbid)</PRE>
+   
+      <UL>Show a specific toolbar</UL>
    
 
    <!-- METHOD PARAMETERS START -->
+   
+   <UL>
+   <B>Parameters:</B>
+   
+     <UL><CODE>sbid</CODE> -  Sidebar ID.    
+      </UL> 
+   
+   </UL>
    
    <!-- METHOD PARAMETERS END -->
 
@@ -2326,9 +2760,47 @@ DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor
    <!-- ADDITIONAL ATTRIBUTES  END -->
 <HR>
 
+   <A NAME="!s!taninverse"><!-- --></A>
+   <H3>taninverse</H3>
+   <PRE>&lt;static&gt; Object <B>taninverse</B>(y,x)</PRE>
+   
+      <UL>Calculate inverse tan with range between 0, 2*pi.</UL>
+   
+
+   <!-- METHOD PARAMETERS START -->
+   
+   <!-- METHOD PARAMETERS END -->
+
+   
+
+   <!-- ADDITIONAL ATTRIBUTES START -->
+   
+   <!-- ADDITIONAL ATTRIBUTES  END -->
+<HR>
+
    <A NAME="!s!undoPointSelection"><!-- --></A>
    <H3>undoPointSelection</H3>
    <PRE>&lt;static&gt; void <B>undoPointSelection</B>()</PRE>
+   
+      <UL>Deletes the last point picked.</UL>
+   
+
+   <!-- METHOD PARAMETERS START -->
+   
+   <!-- METHOD PARAMETERS END -->
+
+   
+
+   <!-- ADDITIONAL ATTRIBUTES START -->
+   
+   <!-- ADDITIONAL ATTRIBUTES  END -->
+<HR>
+
+   <A NAME="!s!updateTestWindow"><!-- --></A>
+   <H3>updateTestWindow</H3>
+   <PRE>&lt;static&gt; void <B>updateTestWindow</B>()</PRE>
+   
+      <UL>Filter based on color and display a test image on the scan settings dialog.</UL>
    
 
    <!-- METHOD PARAMETERS START -->
@@ -2346,6 +2818,8 @@ DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor
    <H3>updateZoom</H3>
    <PRE>&lt;static&gt; void <B>updateZoom</B>(ev)</PRE>
    
+      <UL>Update view.</UL>
+   
 
    <!-- METHOD PARAMETERS START -->
    
@@ -2361,6 +2835,8 @@ DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor
    <A NAME="!s!vflip"><!-- --></A>
    <H3>vflip</H3>
    <PRE>&lt;static&gt; void <B>vflip</B>()</PRE>
+   
+      <UL>Flip picture vertically</UL>
    
 
    <!-- METHOD PARAMETERS START -->
@@ -2440,6 +2916,6 @@ DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor
 <FONT SIZE="-1">
 
 </FONT>
-<div class="jsdoc_ctime">Documentation generated by <a href="http://jsdoc.sourceforge.net/" target="_parent">JSDoc</a> on Thu Dec 16 05:52:48 2010</div>
+<div class="jsdoc_ctime">Documentation generated by <a href="http://jsdoc.sourceforge.net/" target="_parent">JSDoc</a> on Tue Mar 15 01:55:05 2011</div>
 </BODY>
 </HTML>

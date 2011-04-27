@@ -1,0 +1,12 @@
+{
+  "name": "WebPlotDigitizer",
+  "description": "Extract numerical data out of plot pictures.",
+  "version": "2.0",
+  "app": {
+    "urls": ["http://arohatgi.info/WebPlotDigitizer/app"],
+    "launch": {"web_url": "http://arohatgi.info/WebPlotDigitizer/app"}
+  },
+  "icons": {
+    "128": "icon.png"
+  }
+}

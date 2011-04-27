@@ -1,9 +1,9 @@
 /*
 	WebPlotDigitizer - http://arohatgi.info/WebPlotDigitizer
 
-	Version 2.0
+	Version 2.1
 
-	Copyright 2010 Ankit Rohatgi <ankitrohatgi@hotmail.com>
+	Copyright 2011 Ankit Rohatgi <ankitrohatgi@hotmail.com>
 
 	This file is part of WebPlotDigitizer.
 
@@ -23,25 +23,57 @@
 
 */
 
-/* This file contains axes alignment functions */
+/**
+ * @fileoverview  Axes alignment functions.
+ * @version 2.1
+ * @author Ankit Rohatgi ankitrohatgi@hotmail.com
+ */
 
+
+/** Have the axes been picked? true/false. */
 var axesPicked; // axes picked?
 
-var xmin;
-var xmax;
-var ymin;
-var ymax;
-var xlog;
-var ylog;
+/** Number of axes points picked. */
+var axesN; 
 
-var axesN; // number of axes points picked
-var axesNmax; // total points needed to align axes.
-var xyAxes; // axes data
+/** Total number of axes points needed to align. */
+var axesNmax;
 
-var plotType; // Options: 'XY', 'bar', 'polar', 'ternary'
+/** XY-Axes data. */
+var xyAxes;
 
+/** Axes alignment data */
+var axesAlignmentData = [];
 
+/** Plot type. Options: 'XY', 'bar', 'polar', 'ternary' or 'map' */
+var plotType; 
 
+/**
+ * Start the alignment process here. Called from the Plot Type option popup.
+ */ 
+function initiatePlotAlignment()
+{
+  xyEl = document.getElementById('r_xy');
+  polarEl = document.getElementById('r_polar');
+  ternaryEl = document.getElementById('r_ternary');
+  mapEl = document.getElementById('r_map');
+  
+  closePopup('axesList');
+  
+  if (xyEl.checked == true)
+    setAxes('XY');
+  else if(polarEl.checked == true)
+    setAxes('polar');
+  else if(ternaryEl.checked == true)
+    setAxes('ternary');
+  else if(mapEl.checked == true)
+    setAxes('map');
+}
+
+/**
+ * Entry point for Axes alignment. 
+ * @param {String} ax_mode Plot Type. Options: 'XY', 'bar', 'polar', 'ternary'
+ */
 function setAxes(ax_mode) 
 {
 
@@ -59,7 +91,7 @@ function setAxes(ax_mode)
 	}
 	else if (plotType == 'polar')
 	{
-		axesNmax = 4;
+		axesNmax = 3;
 		showPopup('polarAxesInfo');
 	}
 	else if (plotType == 'ternary')
@@ -67,8 +99,17 @@ function setAxes(ax_mode)
 		axesNmax = 3;
 		showPopup('ternaryAxesInfo');
 	}
+	else if (plotType == 'map')
+	{
+		axesNmax = 2;
+		showPopup('mapAxesInfo');
+	}
 }
 
+/**
+ * Handles mouseclick in axis alignment mode. Axes point are defined using this.
+ * @param {Event} ev Mouse event.
+ */
 function pickCorners(ev)
 {
 	if (axesN < axesNmax)
@@ -95,13 +136,19 @@ function pickCorners(ev)
 				
 				if (plotType == 'XY')
 				{
-					showPopup('xyRangeForm');
+					showPopup('xyAlignment');
 				}
 				else if (plotType == 'polar')
 				{
+					showPopup('polarAlignment');
 				}
 				else if (plotType == 'ternary')
 				{
+					showPopup('ternaryAlignment');
+				}
+				else if (plotType == 'map')
+				{
+					showPopup('mapAlignment');
 				}
 
 				redrawCanvas();
@@ -111,22 +158,79 @@ function pickCorners(ev)
 }
 
 
-function setXYRange() // set the X-Y data range.
+/**
+ * Store the alignment data.
+ */
+function alignAxes()
 {
+    if (plotType == 'XY')
+    {
 	var xminEl = document.getElementById('xmin');
 	var xmaxEl = document.getElementById('xmax');
 	var yminEl = document.getElementById('ymin');
 	var ymaxEl = document.getElementById('ymax');
-    // var xlogEl = document.getElementById('xlog');
-	// var ylogEl = document.getElementById('ylog');
+    
+	axesAlignmentData[0] = parseFloat(xminEl.value);
+	axesAlignmentData[1] = parseFloat(xmaxEl.value);
+	axesAlignmentData[2] = parseFloat(yminEl.value);
+	axesAlignmentData[3] = parseFloat(ymaxEl.value);
 	
-	xmin = parseFloat(xminEl.value);
-	xmax = parseFloat(xmaxEl.value);
-	ymin = parseFloat(yminEl.value);
-	ymax = parseFloat(ymaxEl.value);
-    //  xlog = xlogEl.checked;
-	//  ylog = ylogEl.checked;
-	//
-	closePopup('xyRangeForm');
+	closePopup('xyAlignment');
+    }
+    else if (plotType == 'polar')
+    {
+	var r1El = document.getElementById('rpoint1');
+	var theta1El = document.getElementById('thetapoint1');
+	var r2El = document.getElementById('rpoint2');
+	var theta2El = document.getElementById('thetapoint2');
+	
+	var degreesEl = document.getElementById('degrees');
+	var radiansEl = document.getElementById('radians');
+	var orientationEl = document.getElementById('clockwise');
+	
+	axesAlignmentData[0] = parseFloat(r1El.value);
+	axesAlignmentData[1] = parseFloat(theta1El.value);
+	axesAlignmentData[2] = parseFloat(r2El.value);
+	axesAlignmentData[3] = parseFloat(theta2El.value);
+	
+	if (degreesEl.checked == true)
+	    axesAlignmentData[4] = 1;
+	else
+	    axesAlignmentData[4] = 0;
+	
+	if (orientationEl.checked == true)
+	    axesAlignmentData[5] = 1;
+	else
+	    axesAlignmentData[5] = 0;
+	
+	
+	closePopup('polarAlignment');
+    }
+    else if (plotType == 'ternary')
+    {
+	var range1El = document.getElementById('range0to1');
+	var range100El = document.getElementById('range0to100');
+	var ternaryNormalEl = document.getElementById('ternarynormal');
+	
+	if (range100El.checked == true)
+	  axesAlignmentData[0] = true;
+	else
+	  axesAlignmentData[0] = false;
+	
+	if (ternaryNormalEl.checked == true)
+	  axesAlignmentData[1] = true;
+	else
+	  axesAlignmentData[1] = false;
+		
+	closePopup('ternaryAlignment');
+    }
+    else if (plotType == 'map')
+    {
+	var scaleLength = document.getElementById('scaleLength');
+	
+	axesAlignmentData[0] = parseFloat(scaleLength.value);
+	
+	closePopup('mapAlignment');
+    }
+    
 }
-

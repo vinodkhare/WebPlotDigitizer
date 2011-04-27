@@ -1,9 +1,9 @@
 /*
     WebPlotDigitizer - http://arohatgi.info/WebPlotDigitizer
 
-    Version 2.0
+    Version 2.1
 
-    Copyright 2010 Ankit Rohatgi <ankitrohatgi@hotmail.com>
+    Copyright 2011 Ankit Rohatgi <ankitrohatgi@hotmail.com>
 
     This file is part of WebPlotDigitizer.
 
@@ -25,11 +25,16 @@
 
 /* This file contains image processing functions */
 
+/**
+ * @fileoverview Image Processing functions.
+ * @version 2.1
+ * @author Ankit Rohatgi ankitrohatgi@hotmail.com
+ */
 
-/* Finds differences between two sets of ImageData and returns a difference matrix
- * The difference matrix is zero for similar pixels, but 1 where pixels don't match
- * 
- * The height and width of the data is assumed to be that of the canvas.
+/** 
+ * Finds differences between two sets of ImageData and returns a difference matrix. 'true' where unmatched, 'false' where pixels match.
+ * @params {ImageData} d1 first ImageData
+ * @params {ImageData} d2 second ImageData
  */
 function findDifference(d1,d2)
 {
@@ -59,7 +64,9 @@ function findDifference(d1,d2)
     return diff;
 }
 
-/* Copies pixels based on the difference matrix. */
+/**
+ * Copies pixels based on the difference matrix. 
+ */
 function copyUsingDifference(copyTo, copyFrom, diff)
 {
     var dw = canvasWidth;
@@ -81,7 +88,9 @@ function copyUsingDifference(copyTo, copyFrom, diff)
     return copyTo;
 }
 
-// create BW image based on the colors specified.
+/** 
+ * create BW image based on the colors specified.
+ */
 function colorSelect(imgd, mode, colorRGB, tol)
 {
     dw = canvasWidth;
@@ -93,10 +102,10 @@ function colorSelect(imgd, mode, colorRGB, tol)
     
     var seldata = new Array();
     
-    for (var rowi; rowi < dh; rowi++)
+    for (var rowi=0; rowi < dh; rowi++)
     {
 	seldata[rowi] = new Array();
-	for(var coli; coli < dw; coli++)
+	for(var coli=0; coli < dw; coli++)
 	{
 	    index = rowi*4*dw + coli*4;
 	    ir = imgd.data[index];
@@ -127,7 +136,9 @@ function colorSelect(imgd, mode, colorRGB, tol)
     return seldata;
 }
 
-// create BW image based on the colors but only in valid region of difference matrix.
+/**
+ * create BW image based on the colors but only in valid region of difference matrix.
+ */
 function colorSelectDiff(imgd, mode, colorRGB, tol, diff)
 {
     dw = canvasWidth;
@@ -139,17 +150,17 @@ function colorSelectDiff(imgd, mode, colorRGB, tol, diff)
     
     var seldata = new Array();
     
-    for (var rowi; rowi < dh; rowi++)
+    for (var rowi=0; rowi < dh; rowi++)
     {
 	seldata[rowi] = new Array();
-	for(var coli; coli < dw; coli++)
+	for(var coli=0; coli < dw; coli++)
 	{
 	    index = rowi*4*dw + coli*4;
 	    ir = imgd.data[index];
 	    ig = imgd.data[index+1];
 	    ib = imgd.data[index+2];
 	    
-	    dist = Math.sqrt((ir-redv)*(ir-redv) + (ig-greenv)*(ig-greenv) + (ib+bluev)*(ib+bluev));
+	    dist = Math.sqrt((ir-redv)*(ir-redv) + (ig-greenv)*(ig-greenv) + (ib-bluev)*(ib-bluev));
 	    
 	    seldata[rowi][coli] = false;
 	    
@@ -173,6 +184,9 @@ function colorSelectDiff(imgd, mode, colorRGB, tol, diff)
     return seldata;
 }
 
+/**
+ * Populate an ImageData array based on a binary data matrix.
+ */
 function binaryToImageData(bwdata,imgd)
 {
     dw = canvasWidth;
@@ -183,13 +197,13 @@ function binaryToImageData(bwdata,imgd)
 	for(var coli = 0; coli < dw; coli++)
 	{
 	    index = rowi*4*dw + coli*4;
-	    if (bwdata[rowi][coli] == true)
+	    if (bwdata[rowi][coli] == false)
 	    {
-		imgd.data[index] = 255; imgd.data[index+1] = 255; imgd.data[index+2] = 255; imgd.data[index+3] = 1;
+		imgd.data[index] = 255; imgd.data[index+1] = 255; imgd.data[index+2] = 255; imgd.data[index+3] = 255;
 	    }
 	    else
 	    {
-		imgd.data[index] = 0; imgd.data[index+1] = 0; imgd.data[index+2] = 0; imgd.data[index+3] = 1;
+		imgd.data[index] = 0; imgd.data[index+1] = 0; imgd.data[index+2] = 0; imgd.data[index+3] = 255;
 	    }
 	}
     }

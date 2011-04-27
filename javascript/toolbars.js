@@ -1,9 +1,9 @@
 /*
 	WebPlotDigitizer - http://arohatgi.info/WebPlotDigitizer
 
-	Version 2.0
+	Version 2.1
 
-	Copyright 2010 Ankit Rohatgi <ankitrohatgi@hotmail.com>
+	Copyright 2011 Ankit Rohatgi <ankitrohatgi@hotmail.com>
 
 	This file is part of WebPlotDigitizer.
 
@@ -23,10 +23,18 @@
 
 */
 
-/* This file contains functions to handle toolbars */
+/**
+ * @fileoverview Handle toolbars.
+ * @version 2.1
+ * @author Ankit Rohatgi ankitrohatgi@hotmail.com
+ */
 
 var toolbarList = ['paintToolbar','colorPickerToolbar']; 
 
+/**
+ * Show a specific toolbar
+ * @param {String} sbid Sidebar ID.
+ */
 function showToolbar(sbid) // Shows a specific sidebar
 {
 	clearToolbar();
@@ -34,6 +42,9 @@ function showToolbar(sbid) // Shows a specific sidebar
 	sb.style.visibility = "visible";
 }
 
+/**
+ * Clear the toolbar area.
+ */
 function clearToolbar() // Clears all open sidebars
 {
       for (ii = 0; ii < toolbarList.length; ii ++)

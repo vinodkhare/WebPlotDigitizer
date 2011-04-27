@@ -1,9 +1,9 @@
 /*
 	WebPlotDigitizer - http://arohatgi.info/WebPlotDigitizer
 
-	Version 2.0
+	Version 2.1
 
-	Copyright 2010 Ankit Rohatgi <ankitrohatgi@hotmail.com>
+	Copyright 2011 Ankit Rohatgi <ankitrohatgi@hotmail.com>
 
 	This file is part of WebPlotDigitizer.
 
@@ -23,12 +23,19 @@
 
 */
 
-/* This file contains manual data collection functions */
+/**
+ * @fileoverview Manual data collection
+ * @version 2.1
+ * @author Ankit Rohatgi ankitrohatgi@hotmail.com
+ */
 
 /* Selected Data Variables */
-var xyData; // Raw data
-var pointsPicked; // number of data points picked.
+var xyData = new Array(); // Raw data
+var pointsPicked = 0; // number of data points picked.
 
+/**
+ * Called when the 'acquire data' button is pressed. 
+ */
 function acquireData()
 {
 	if(axesPicked == 0)
@@ -43,6 +50,9 @@ function acquireData()
 	}
 }
 
+/**
+ * Initiate Manual data acquisition. Enables data capture on the canvas.
+ */ 
 function pickPoints() // select data points.
 {
 	if (axesPicked == 0)
@@ -53,14 +63,17 @@ function pickPoints() // select data points.
 	{
 		removeAllMouseEvents();
 		addMouseEvent('click',clickPoints,true);
-		pointsPicked = 0;
-		xyData = [];
+		//pointsPicked = 0;
+		//xyData = [];
 		pointsStatus(pointsPicked);
-		redrawCanvas();
+		//redrawCanvas();
 		showSidebar('manualMode');
 	}
 }
 
+/**
+ * Triggered by clicking on canvas, stores position in xyData global array.
+ */
 function clickPoints(ev)
 {
 	xi = ev.layerX;
@@ -80,15 +93,22 @@ function clickPoints(ev)
 
 }
 
-
+/**
+ * Called when 'clear all' is hit. Clears data collected, redraws canvas. 
+ */
 function clearPoints() // clear all markings.
 {
 	pointsPicked = 0;
 	pointsStatus(pointsPicked);
 	redrawCanvas();
+	markedScreen = currentScreen;
+	
 	removeAllMouseEvents();
 }
 
+/**
+ * Deletes the last point picked.
+ */
 function undoPointSelection()
 {
 	if (pointsPicked >= 1)
@@ -112,22 +132,33 @@ function undoPointSelection()
 	}
 }
 
+/**
+ * Updates the displayed number of points on the sidebar.
+ */
 function pointsStatus(pn) // displays the number of points picked.
 {
 	var points = document.getElementById('pointsStatus');
+	var autoPoints = document.getElementById('autoPointsStatus');
 	points.innerHTML = pn;
+	autoPoints.innerHTML = pn;
 }
 
+/**
+ * Delete specific point close to clicked position.
+ */
 function deleteSpecificPoint()
 {
 	removeAllMouseEvents();
 	addMouseEvent('click',deleteSpecificPointHandler,true);
 }
 
+/**
+ * Handle clicks when in specific point deletion mode
+ */
 function deleteSpecificPointHandler(ev)
 {
-	xi = parseFloat(ev.layerX);
-	yi = parseFloat(ev.layerY);
+	var xi = parseFloat(ev.layerX);
+	var yi = parseFloat(ev.layerY);
 	
 	var minDistance = 10.0;
 	var foundPoint = 0;
@@ -143,6 +174,7 @@ function deleteSpecificPointHandler(ev)
 		{
 			foundPoint = 1;
 			foundIndex = ii;
+			minDistance = distance;
 		}
 	}
 
